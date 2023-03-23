@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AddHabitsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="731dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".Activities.AddActivity"
+        tools:ignore="MissingConstraints">
+
+        <!--Заголовок-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Добавление привычки"
+            android:textAlignment="center" />
+
+        <!--Ввод названия привычки-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNameHabits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Введите название привычки">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNameHabits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Ввод описания привычки-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutDescriptionHabits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Введите описание привычки">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDescriptionHabits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Подсказка к спиннеру-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Выберите приоритет привычки"
+            android:textAlignment="center" />
+
+        <!--Спинер выбора приоритета-->
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:minHeight="48dp" />
+
+        <!--Подсказка к радиобатону-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Выберите тип привычки"
+            android:textAlignment="center" />
+        <!--Выбор типа привычки-->
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Хорошая" />
+
+            <RadioButton
+                android:id="@+id/radio_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Плохая" />
+        </RadioGroup>
+
+        <!--Ввод описания привычки-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCountHabits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Введите количество привычки">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCountHabits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Ввод периодичности привычки-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutFrequencyHabits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:hint="Введите периодичность привычки">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFrequencyHabits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Кнопка сохранения-->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить" />
+
+    </LinearLayout>
+
+</FrameLayout>
