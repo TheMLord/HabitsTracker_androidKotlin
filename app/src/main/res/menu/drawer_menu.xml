@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Главная страница" />
-    <item android:title="Информаци" />
+    <group android:menuCategory="alternative">
+        <item
+            android:id="@+id/menu_home"
+            android:title="Главное меню" />
+
+        <item
+            android:id="@+id/menu_info"
+            android:title="Информация о приложении"/>
+    </group>
 </menu>

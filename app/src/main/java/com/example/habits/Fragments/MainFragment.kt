@@ -8,11 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.NavController
 import com.example.habits.Activities.dataBase
 import com.example.habits.Data.DataLiveFragment
 import com.example.habits.ModelHabits.Habits
 import com.example.habits.databinding.FragmentBlankBinding
+import com.google.android.material.navigation.NavigationView
 
 class MainFragment : Fragment() {
     private val dataModel : DataLiveFragment by activityViewModels()
