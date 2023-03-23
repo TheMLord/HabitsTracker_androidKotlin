@@ -6,10 +6,12 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.viewpager.widget.ViewPager
 import com.example.habits.Adapters.AdapterViews
 import com.example.habits.Data.DataHabits
 import com.example.habits.Data.DataLiveFragment
+import com.example.habits.R
 import com.example.habits.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -29,13 +31,9 @@ class MainActivity : AppCompatActivity() {
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
 
-
-        navView = viewBinding.navigationView
-        drawerLayout = viewBinding.drawerLayout
-        navController = viewBinding.
-
-        viewPage = viewBinding.viewpager
         viewPage.adapter = AdapterViews(supportFragmentManager)
+
+        navController = Navigation.findNavController(this, R.id.viewpager);
 
         dataModel.msg.observe(this) {
             if (it.equals("добавить")) {
